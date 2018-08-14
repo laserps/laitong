@@ -1,0 +1,15 @@
+<?php
+
+/*$file_ = file_get_contents('http://www.ranthong.com/webboard/gp.php');
+    $num1 = explode('</td><td align = center><b>',$file_);
+	//print_r($num1);
+	$num1_n = explode('-', $num1[1]);
+	//print_r($num1_n);
+	$gold_ = $num1_n[1];
+	$gold__ =  (int)$gold_;
+*/
+//$gold__ =  "20400";
+
+//echo $gold__;
+
+?>

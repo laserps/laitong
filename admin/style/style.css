@@ -1,0 +1,90 @@
+body {
+	margin-left: 0px;
+    margin-right: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding-right: 0px;
+	padding-left: 0px;
+	font-size: 14px;
+	background: #ffffff; 
+	padding-bottom: 0px;
+	color: #666666;
+	padding-top: 0px;
+    font-family: 'Segoe UI','Microsoft Sans Serif',Tahoma;
+}
+
+.th{
+    font-size: 16px;
+    color: #000099;
+    font-weight: bold;
+    font-family: 'Segoe UI','Microsoft Sans Serif',Tahoma;
+}
+
+.th2{
+    font-size: 16px;
+    color: #666666;
+    font-family: 'Segoe UI','Microsoft Sans Serif',Tahoma;
+}
+
+.th3{
+    font-size: 13px;
+    color: #666666;
+    font-family: 'Segoe UI','Microsoft Sans Serif',Tahoma;
+}
+
+.tb{
+    font-size: 16px;
+    color: #666666;
+    font-family: 'Segoe UI','Microsoft Sans Serif',Tahoma;
+}
+
+.tb:hover td{
+    color: #444444;
+	background: #C6E0A3; 
+}
+.f36{font-size: 36px;}
+.b{font-weight: bold;}
+.r{padding-right: 10px;}
+.l{padding-left: 10px;}
+.t{padding-top: 10px;}
+.u{padding-bottom: 10px;}
+.cr{color: #ff3333;}
+.cg{color: green;}
+.ct{color: #999999;}
+.co{color: #ff9933;}
+
+.ad{font-family: Tahoma, "MS Sans Serif"; font-size: 14px;color: #666666;}
+
+.button {
+	CURSOR:pointer;
+	FONT-FAMILY: "MS Sans Serif";
+	font-size: 16px;
+	border: 1px inset #000000;
+	background-color: #CCCCCC;
+}
+
+hr {
+    border: 0;
+    width: 100%;
+    color: #A0CD64;
+    background-color: #A0CD64;
+    height: 1px;
+}
+
+.box {FONT-SIZE: 14px; COLOR: #666;  BORDER-RIGHT: #bebebe 1px solid; BORDER-TOP: #bebebe 1px solid; BORDER-LEFT: #bebebe 1px solid;  BORDER-BOTTOM: #bebebe 1px solid;
+}
+/* Important */
+a.linkC1,.linkC1:link,.linkC1:active,.linkC1:visited,.linkC1:hover {cursor:pointer; outline:none;}
+.linkC1:link {color:#105CB6} 
+.linkC1:active {color:#003}
+.linkC1:visited {color:#105CB6} 
+.linkC1:hover {color:#003}
+
+/* Page navigation */ 	
+.pagination { color:#666; padding:5px 0px 5px 0px; border:1px solid #fff; margin:0}
+.pagination p {position:relative; text-align:center; font:83%/1.5 arial,tahoma,verdana,sans-serif;}
+.pagination p a.linkC1, .pagination p .linkC1:visited, .pagination p .linkC1:hover, .pagination p .linkC1:active {text-decoration:none; background:#fff; padding:2px 5px; border:1px solid #ccc; margin-right:1px}
+.pagination p .linkC1:hover {background:#86b0e1; color:#fff}
+.pagination p span {text-decoration:none; background:#fff; padding:2px 05px; border:1px solid #ccc; color:#ccc; margin-right:1px}
+.pagination * {margin:0;}
+.pagination h4 {margin-top:-1.45em; padding:0; border:none}

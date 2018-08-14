@@ -1,0 +1,227 @@
+<?php  
+	function check_null($percent){
+		if($percent==""){
+			return "0";
+		}else{
+			return $percent;
+		}
+	}
+
+	if($_POST['id'] != ""){
+		for($j=0;$j<count($_POST['id_branch']);$j++){
+			$sys->db->delete("tb_diamond_branch", " id_branch = '".$_POST['id_branch'][$j]."' and id_diamond = '".$_POST['id']."' ");
+			$data_diamond_branch = array(
+				"id_branch"						=>	$_POST['id_branch'][$j],
+				"id_diamond"					=>	$_POST['id'],
+
+				"percent_diamond_one"			=>	check_null($_POST['percent_diamond_one'][$j]),
+				"percent_diamond_nokud_one"		=>	check_null($_POST['percent_diamond_nokud_one'][$j]),
+				"percent_diamond_medicine_one"  =>	check_null($_POST['percent_diamond_medicine_one'][$j]),
+
+				"percent_diamond_two"			=>	check_null($_POST['percent_diamond_two'][$j]),
+				"percent_diamond_nokud_two"		=>	check_null($_POST['percent_diamond_nokud_two'][$j]),
+				"percent_diamond_medicine_two"  =>	check_null($_POST['percent_diamond_medicine_two'][$j]),
+
+				"percent_diamond_three"			=>	check_null($_POST['percent_diamond_three'][$j]),
+				"percent_diamond_nokud_three"	  =>	check_null($_POST['percent_diamond_nokud_three'][$j]),
+				"percent_diamond_medicine_three"  =>	check_null($_POST['percent_diamond_medicine_three'][$j]),
+
+				"percent_diamond_four"			=>	check_null($_POST['percent_diamond_four'][$j]),
+				"percent_diamond_nokud_four"	=>	check_null($_POST['percent_diamond_nokud_four'][$j]),
+
+				"percent_diamond_five"			 =>	check_null($_POST['percent_diamond_five'][$j]),
+				"percent_diamond_nokud_five"	 =>	check_null($_POST['percent_diamond_nokud_five'][$j]),
+				"percent_diamond_medicine_five"  =>	check_null($_POST['percent_diamond_medicine_five'][$j]),
+
+				"id_member"					=>	$_SESSION[id_member],
+				"update_diamond"			=>  date("d-m-Y H:i")
+				);
+			
+			$sys->db->insert("tb_diamond_branch", $data_diamond_branch);
+		}
+		$sys->Edit($data,$tbl,$page_admin,$fiel_id,$_POST['id']);
+	}
+
+
+	if($_GET['id'] !=""){
+		$rs = $sys->Update($tbl,$fiel_id,$_GET['id']);
+	}
+
+
+	if(($_POST['save'] == "news_add") and ($_GET['id'] == "")){
+		unset($_POST['save']);
+		$sys->Add($data,$tbl,$page_admin);
+	}
+
+	echo $fnc->form_check($message_alert);
+
+	$row_branch = $sys->db->result("tb_branch",null," id_branch asc ");
+
+?>
+
+
+
+<table width="100%" cellspacing="0" cellpadding="1" border="0">
+    <tr>
+        <td height="40" align="center"><table width="100%" cellpadding="0" cellspacing="0"><tr>
+          <td bgcolor="#BBD8EC" align="center" height="40" class="th"><?php echo ($_GET['id'])? 'แก้ไข' : 'เพิ่ม' ;?>ฝังเพชร</td>
+        </tr></table></td>
+    </tr>
+    <tr>
+        <td align="center">
+		
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+<table width="130%" border="0" cellpadding="0" cellspacing="0" class="th3">
+	<FORM METHOD=POST onsubmit="return chkvalue(this)" ACTION="">
+		<tr height="30" class="l">
+
+			<td width="130%" align="left" bgcolor="#E7F1F8">
+				<table class="th3" cellpadding="5" border="0">
+
+				
+
+
+					<tr>
+					  <td align="right" class="r">ฝังเพชร: </td>
+					  <td colspan = "5"><input name="name_diamond" type="text" class="box" id="name_diamond" style="border:dotted; border-color:#0000FF; width:250px"  value="<?php echo $rs->name_diamond;?>"/>
+				      </td>
+					</tr>
+					
+					<tr>
+					  <td align="right" class="r">&nbsp;</td>
+					  <td <?php if($_GET['id'] == "13"){?>colspan = "1" <?php }?> align = "left" bgcolor = "#e5e5e5"><b>กรอบ 90</b></td>
+					  <td  align = "center" bgcolor = "#f9f9f9"><b>ตลับ</b></td>
+					  <td  align = "center" bgcolor = "#e5e5e5"><b>กรอบ70</b></td>
+					  <td  align = "center" bgcolor = "#e5e5e5"><b>กรอบ75</b></td>
+					  <td  align = "center" bgcolor = "#f9f9f9" style = 'visibility:hidden;' ><b>อุปกรณ์</b></td>
+
+					</tr>
+
+					<?php foreach($row_branch as $rs_branch){ 
+						$i++;
+					$rs_branch_diamond  = $sys->db->record("tb_diamond_branch"," id_branch = '".$rs_branch->id_branch."' and id_diamond = '".$rs->id_diamond."' ");	
+					?>
+
+					
+
+					<tr>
+					  <td align="right" class="r">สาขา&nbsp;<b><?php echo $rs_branch->name_branch;?></b>: </td>
+					  <td bgcolor = "#e5e5e5">
+					 <?php if($_GET['id'] == "13"){?>
+					  ขัดเงา:
+					  <?php }?>
+					  <input name="percent_diamond_one[]" type="text" class="box" id="percent_diamond_one<?php echo $i;?>" style="border:dotted; border-color:#0000FF; color:#ff0000; width:20px"  value="<?php echo $rs_branch_diamond->percent_diamond_one;?>"/>&nbsp;%&nbsp;
+					 <?php if($_GET['id'] == "13"){?>
+					แกะลาย:	
+					  <input name="percent_diamond_nokud_one[]" type="text" class="box" id="percent_diamond_nokud_one<?php echo $i;?>" style="border:dotted; border-color:#0000FF; color:#ff0000; width:20px"  value="<?php echo $rs_branch_diamond->percent_diamond_nokud_one;?>"/>&nbsp;%
+					 <?php }?>
+
+					  <?php if($_GET['id'] == "13"){?>
+					ลงยา:	
+					  <input name="percent_diamond_medicine_one[]" type="text" class="box" id="percent_diamond_medicine_one<?php echo $i;?>" style="border:dotted; border-color:#0000FF; color:#ff0000; width:20px"  value="<?php echo $rs_branch_diamond->percent_diamond_medicine_one;?>"/>&nbsp;%
+					 <?php }?>
+
+				      </td>
+
+
+					 <td bgcolor = "#f9f9f9">
+					 <?php if($_GET['id'] == "13"){?>
+					  ขัดเงา:
+					  <?php }?>
+					  <input name="percent_diamond_two[]" type="text" class="box" id="percent_diamond_two<?php echo $i;?>" style="border:dotted; border-color:#0000FF; color:#ff0000; width:20px"  value="<?php echo $rs_branch_diamond->percent_diamond_two;?>"/>&nbsp;%&nbsp;
+					 <?php if($_GET['id'] == "13"){?>
+					แกะลาย:	
+					  <input name="percent_diamond_nokud_two[]" type="text" class="box" id="percent_diamond_nokud_two<?php echo $i;?>" style="border:dotted; border-color:#0000FF; color:#ff0000; width:20px"  value="<?php echo $rs_branch_diamond->percent_diamond_nokud_two;?>"/>&nbsp;%
+					 <?php }?>
+
+					  <?php if($_GET['id'] == "13"){?>
+					ลงยา:	
+					  <input name="percent_diamond_medicine_two[]" type="text" class="box" id="percent_diamond_medicine_two<?php echo $i;?>" style="border:dotted; border-color:#0000FF; color:#ff0000; width:20px"  value="<?php echo $rs_branch_diamond->percent_diamond_medicine_two;?>"/>&nbsp;%
+					 <?php }?>
+				      </td>
+
+					 <td bgcolor = "#e5e5e5">
+					 <?php if($_GET['id'] == "13"){?>
+					  ขัดเงา:
+					  <?php }?>
+					  <input name="percent_diamond_three[]" type="text" class="box" id="percent_diamond_three<?php echo $i;?>" style="border:dotted; border-color:#0000FF; color:#ff0000; width:20px"  value="<?php echo $rs_branch_diamond->percent_diamond_three;?>"/>&nbsp;%&nbsp;
+					 <?php if($_GET['id'] == "13"){?>
+					แกะลาย:	
+					  <input name="percent_diamond_nokud_three[]" type="text" class="box" id="percent_diamond_nokud_three<?php echo $i;?>" style="border:dotted; border-color:#0000FF; color:#ff0000; width:20px"  value="<?php echo $rs_branch_diamond->percent_diamond_nokud_three;?>"/>&nbsp;%
+					 <?php }?>
+
+					  <?php if($_GET['id'] == "13"){?>
+					ลงยา:	
+					  <input name="percent_diamond_medicine_three[]" type="text" class="box" id="percent_diamond_medicine_three<?php echo $i;?>" style="border:dotted; border-color:#0000FF; color:#ff0000; width:20px"  value="<?php echo $rs_branch_diamond->percent_diamond_medicine_three;?>"/>&nbsp;%
+					 <?php }?>
+				      </td>
+
+
+					   <td bgcolor = "#e5e5e5">
+					 <?php if($_GET['id'] == "13"){?>
+					  ขัดเงา:
+					  <?php }?>
+					  <input name="percent_diamond_five[]" type="text" class="box" id="percent_diamond_five<?php echo $i;?>" style="border:dotted; border-color:#0000FF; color:#ff0000; width:20px"  value="<?php echo $rs_branch_diamond->percent_diamond_five;?>"/>&nbsp;%&nbsp;
+					 <?php if($_GET['id'] == "13"){?>
+					แกะลาย:	
+					  <input name="percent_diamond_nokud_five[]" type="text" class="box" id="percent_diamond_nokud_five<?php echo $i;?>" style="border:dotted; border-color:#0000FF; color:#ff0000; width:20px"  value="<?php echo $rs_branch_diamond->percent_diamond_nokud_five;?>"/>&nbsp;%
+					 <?php }?>
+
+					  <?php if($_GET['id'] == "13"){?>
+					ลงยา:	
+					  <input name="percent_diamond_medicine_five[]" type="text" class="box" id="percent_diamond_medicine_five<?php echo $i;?>" style="border:dotted; border-color:#0000FF; color:#ff0000; width:20px"  value="<?php echo $rs_branch_diamond->percent_diamond_medicine_five;?>"/>&nbsp;%
+					 <?php }?>
+				      </td>
+
+					  <td bgcolor = "#f9f9f9" style = 'visibility:hidden;'>
+					 <?php if($_GET['id'] == "13"){?>
+					  ขัดเงา:
+					  <?php }?>
+					  <input name="percent_diamond_four[]" type="text" class="box" id="percent_diamond_four<?php echo $i;?>" style="border:dotted; border-color:#0000FF; color:#ff0000; width:20px"  value="<?php echo $rs_branch_diamond->percent_diamond_four;?>"/>&nbsp;%&nbsp;
+					 <?php if($_GET['id'] == "13"){?>
+					แกะลาย:	
+					  <input name="percent_diamond_nokud_four[]" type="text" class="box" id="percent_diamond_nokud_four<?php echo $i;?>" style="border:dotted; border-color:#0000FF; color:#ff0000; width:20px"  value="<?php echo $rs_branch_diamond->percent_diamond_nokud_four;?>"/>&nbsp;%
+					 <?php }?>
+				      </td>
+
+					</tr>
+
+					<input type="hidden" name="id_branch[]" value = "<?php echo $rs_branch->id_branch;?>">
+					<?php }?>
+
+					
+
+	
+					<tr>
+					  <td align="right" class="r">&nbsp;</td>
+					  <td colspan = "4">
+					  <input name="save" type="hidden" id="save" value="news_add" />
+					  <INPUT TYPE="hidden" NAME="id" value = "<?php echo $rs->id_diamond;?>">
+					  <input name="image" type="image" src="images/b_save.gif" />
+						
+					  
+
+
+				        <a href="main.php?op=<?php echo $_GET['op']?>&act=list"><img src="images/b_cancel.gif" border="0"/></a></td>
+				  </tr>
+				</table>
+			</td>
+		</tr>
+	</form>
+</table>
+<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+        </td>
+    </tr>
+    <tr>
+        <td> </td>  
+    </tr>
+
+
+    <tr>
+    <td height="40" align="center" bgcolor="#BBD8EC" class="th">
+
+        </td>
+    </tr>
+</table>

@@ -1,0 +1,24 @@
+
+.f10 {  font-family: Tahoma, "MS Sans Serif"; font-size: 11px}
+.f12 {  font-family: Tahoma, "MS Sans Serif"; font-size: 12px}
+.f13 {  font-family: Tahoma, "MS Sans Serif"; font-size: 13px}
+
+.f14 {  font-family: Tahoma, "MS Sans Serif"; font-size: 14px}
+.f15 {  font-family: Tahoma, "MS Sans Serif"; font-size: 13px; color:#0066CC}
+.f16 {  font-family: Tahoma, "MS Sans Serif"; font-size: 16px}
+.abig {  font-family: Arial, Helvetica, sans-serif; font-size: 30px}
+
+a:link { color: #0066ff; text-decoration: none}
+a:visited { color: #0066ff; text-decoration: none}
+a:active { color: #0066ff; text-decoration: underline}
+a:hover { color: #0066ff; text-decoration: underline}
+
+.anormal {  font-family: Arial, Helvetica, sans-serif; font-size: 14px}
+.tb_button {  border-color: 999999 999999 E5E5E5; font-family: Tahoma, "MS Sans Serif"; font-size: 13px; border-style: solid; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px}
+.
+f11 {  font-family: Angsana, "MS Sans Serif"; font-size: 11px}
+
+.f11_brown { font-family: Tahoma, "MS Sans Serif"; font-size: 11px; ; color: #996600}
+.bg_under {  background-image: url(../test/bg_under.gif); background-repeat: repeat}
+.bg_line {  background-image: url(../test/h_link_line.gif); background-repeat: repeat-y}
+.bodybg {  background-color: #C8E197}

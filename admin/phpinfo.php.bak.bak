@@ -1,0 +1,5 @@
+<?php
+echo '<pre>';
+$file_ = file_get_contents('http://workbythaidev.com/api/price_gold.php');
+var_dump();
+?>

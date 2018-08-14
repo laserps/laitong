@@ -1,0 +1,53 @@
+.body_menu {
+        font-family: Verdana, Arial, Helvetica, sans-serif;
+        margin: 0;
+        font-size: 65%;
+        font-weight: bold;
+        background: #FFF;
+        }
+ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        }
+
+img {
+    border: none;
+}
+
+/*- Menu 10--------------------------- */
+
+#menu10 {
+        width: 180px;
+        margin: 3px;
+        }
+
+#menu10 li a {
+        height: 32px;
+          voice-family: "\"}\"";
+          voice-family: inherit;
+          height: 24px;
+        text-decoration: none;
+        }
+
+#menu10 li a:link, #menu10 li a:visited {
+        color: #4D4D4D;
+        display: block;
+        background:  url(../images/menu10.gif);
+        padding: 8px 0 0 10px;
+        }
+
+#menu10 li a:hover, #menu10 li #current {
+        color: #FF9834;
+        background:  url(../images/menu10.gif) 0 -32px;
+        padding: 8px 0 0 10px;
+        }
+
+ li span{;
+	color: #000066;
+	display: block;
+	background:  url(../images/menu10.gif) 0 -64px;
+	padding: 8px 0 9px 0;
+	text-align: left;
+	font-weight: bold;
+}

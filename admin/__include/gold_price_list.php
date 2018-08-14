@@ -1,0 +1,1 @@
+<iframe src = "http://www.goldtraders.or.th/" width = "87%" height = "370"> 

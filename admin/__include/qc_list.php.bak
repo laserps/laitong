@@ -1,0 +1,95 @@
+
+<?php  
+	$row		= $sys->db->result("tb_category",null,"id_category asc");
+	
+	echo $sys->fnc->confirm();
+	echo $fnc->checkall();
+
+	if($_POST['id']){
+		$sys->Delete_all($_POST['id'],$tbl,$fiel_id,$page_admin);
+	}
+	if($_GET[del] != ""){
+	 $sys->Del($_GET['del'],$tbl,$page_admin,$fiel_id);
+	}
+
+$_SESSION['id_stock'] = $_GET['id_stock'];
+$_SESSION['name_stock'] = $_GET['name_stock'];
+?>
+
+
+<table width="100%" cellspacing="0" cellpadding="1" border="0" >
+    <tr>
+        <td align="center"><table width="100%" cellpadding="0" cellspacing="0"><tr>
+          <td bgcolor="#BBD8EC" align="center" height="40" class="th">รายการสต๊อก <?php echo $_SESSION['name_stock'];?></td>
+        </tr></table></td>
+    </tr>
+
+
+
+
+	<FORM name="myForm" METHOD="POST" ACTION="">
+    <tr>
+        <td>
+	<table width="100%" border="0" cellspacing="1" cellpadding="0" style="border:1px solid #BBD8EC">
+    <tr height="30" bgcolor="#BBD8EC">
+	  <td align="center" bgcolor="#BBD8EC" class="th">รหัสแบบ</td>
+	  <td align="center" bgcolor="#BBD8EC" class="th">พิมพ์</td>
+	  <td align="center" bgcolor="#BBD8EC" class="th">จำนวน</td>
+	  <td align="center" bgcolor="#BBD8EC" class="th">พิมพ์รายงาน</td>
+
+    </tr>
+    <?php if(!$row):?>
+    <tr height="30" bgcolor="#eeeeee">
+      <td align="center" colspan="5" class="th2">No Data</td>
+    </tr>
+    <?php
+else:
+foreach($row as $rs):
+$bgc=($i++ % 2) ? '#FFFFFF' : '#E0F0F0';
+?>
+    <tr height="25" bgcolor="<?php echo $bgc?>" align="center" class="tb">
+	  <td align="center"><?php echo $rs->num_category?></td>
+      <td align="center"><?php echo $rs->name_category?></td>
+
+	  <td align="center"><?php 
+	  $dia =  $sys->db->sum("tb_product", "id_category = '".$rs->id_category."' and id_stock = '".$_SESSION['id_stock']."' ", "id_product asc "," total_product ");
+
+	  
+
+	  $dia_ = $dia_+$dia;
+	  echo '<a href="?op=qc&act=add&id='.$rs->id_category.'  " target = "_blank">'.number_format($dia).'</a>';
+      echo '&nbsp;&nbsp;';
+	  
+	  echo '<a href="report_qc.php?id_stock='.$_SESSION['id_stock'].'&id_category='.$rs->id_category.'" target = "_blank"><img src="images/b_print.gif" width="16" height="16" border="0" alt=""></a>&nbsp;&nbsp;&nbsp;';
+
+	  /*echo '<a href="report_qc_fail.php?id_stock='.$_SESSION['id_stock'].'&id_category='.$rs->id_category.'" target = "_blank"><img src="images/r_print.gif" width="16" height="16" border="0" alt=""></a>';
+	  
+	  echo '<span style = "color:#ff0000;"> '.$dia_r."</span>";*/
+	  ?>
+	  
+	  </td>
+
+
+	 
+
+    </tr>
+<?php
+endforeach;
+endif;
+?>
+
+ <tr height="30" bgcolor="#BBD8EC">
+	  <td align="center" bgcolor="#BBD8EC" class="th">&nbsp;</td>
+	  <td align="center" bgcolor="#BBD8EC" class="th"><b>รวม</b></td>
+	  <td align="center" bgcolor="#BBD8EC" class="th"><?php echo number_format($dia_);?></td>
+    </tr>
+
+
+</table>
+<div align="left"></div>       
+<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+	  </td>
+    </tr>
+
+ 
+</table>

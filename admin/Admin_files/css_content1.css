@@ -1,0 +1,134 @@
+/* - - - - - - - - - - - - - - - - - - - - -
+Title: Drukwerkdeal.nl, goedkoop drukwerk o.a. visitekaartjes, briefpapier, enveloppen, folders, flyers en posters.
+Author: Brightworks, http://www.brightworks.nl
+URL: /css/screen.css
+
+Created: Nov 11, 2008
+Modified: Nov 11, 2008
+- - - - - - - - - - - - - - - - - - - - - */
+
+
+/* ******************  body  *************** */
+* {margin:0; padding:0; border:0;}
+/* MET BACKGROUND ACHTER LINKER MENU: body {margin:0; padding:0; font-family:Verdana, Arial, Helvetica, sans-serif; font-size:11px; color:#999999; background-color:#ffffff; background:url(/assets/site_bg.gif) top center repeat-y; } */
+body {margin:0; padding: 9px 0px 0px 0px; font-family:Verdana, Arial, Helvetica, sans-serif; font-size:11px; color:#999999; background:#cccccc url(/assets/body.gif) top center repeat-x; }
+a {color:#666666; text-decoration:underline;}
+a:hover {color:#ee7f07; text-decoration:underline;}
+img {border:none;}
+.clear {clear:both;}
+hr {display: block; margin: 0px 0px 10px 0px;  background: url(/assets/borderbox.gif) repeat-y; clear: both;  height:3px; }
+div#search hr {margin-bottom:0;}
+
+/* titles */
+div#leftcolumn h1 {width:183px; font-family: Verdana, Arial, Helvetica, sans-serif; font-weight: bold; color:#000000; font-size: 11px; text-transform: uppercase; line-height: 25px; border-bottom:1px solid #7f7f7f; padding: 5px 0px 3px 8px; margin: 0; display: block;}
+div#account_details h3 {width:165px; font-family: Verdana, Arial, Helvetica, sans-serif; font-weight: bold; color:#000000; font-size: 11px; text-transform: uppercase; line-height: 25px; border-bottom:1px solid #7f7f7f; padding: 5px 0px 3px 8px; margin: 0; display: block; background: url(/assets/h1_bg_trans_down.gif) right;}
+
+div#leftcolumn h1 a {display: block; text-decoration: none; color:#000;}
+div#leftcolumn h1 a:hover {display: block; text-decoration: none; color:#ee7f07;}
+
+div#leftcolumn div#search h1 {width:183px; font-family: Verdana, Arial, Helvetica, sans-serif; font-weight: bold; color:#000000; font-size: 13px; text-transform: uppercase; line-height: auto; padding: 0px 0px 0px 8px; margin: 0; display: block; border:none; background: none;}
+
+div#content h1 {font-family: Verdana, Arial, Helvetica, sans-serif; font-weight: bold; color:#000000; font-size: 13px; text-transform: uppercase; line-height: 25px;}
+div#content h2 {font-family: Verdana, Arial, Helvetica, sans-serif; font-weight: bold; color:#000000; font-size: 13px; text-transform: uppercase; line-height: 25px;}
+
+div#rightcolumn h1 {font-family: Verdana, Arial, Helvetica, sans-serif; font-weight: bold; color:#000000; font-size: 13px; text-transform: uppercase; margin: 0px 0px 8px 0px; padding: 0;}
+div#rightcolumn h1.nospace {margin:0px 0px 5px 0px;}
+div#rightcolumn h2 {font-family: Verdana, Arial, Helvetica, sans-serif; font-weight: bold; color:#e3680c; font-size: 14px; text-transform: uppercase; line-height:normal; margin: 0px 0px 5px 0px;}
+
+
+/* ******************  navigation  *************** */
+div#header ul#nav {height:21px; width:759px; margin: 0px 0px 5px 0px; padding: 0; text-align:center; clear: none; float: left;}
+div#header ul#nav li, div#header ul#nav li.last {background:#ffae53 url(/assets/nav_l.gif) left no-repeat; list-style-type: none; float:left; color:#fff; padding: 0px 0px 0px 12px; margin: 0px 3px 0px 0px; height: 18px; font-size: 11px;}
+div#header ul#nav li:hover {background:#ff8000 url(/assets/nav_l_hl.gif) left no-repeat; }
+div#header ul#nav li a {color:#fff; text-decoration: none; background:#ffae53 url(/assets/nav_r.gif) right no-repeat; display: block; height: 16px; padding: 2px 12px 0px 0px;}
+div#header ul#nav li a:hover {color:#fff; background:#ff8000 url(/assets/nav_r_hl.gif) right no-repeat; }
+
+/* ******************  containers  *************** */
+div#headcontainer {width:610px; height: auto; margin:0 auto; padding: 0px 16px 16px 16px; background-color: #ffffff;}
+
+/* header */
+div#headcontainer div#header {width:759px; height: 180px; float:left; margin: 0px 0px 12px 0px; text-align:center;}
+div#headcontainer div#header div#h1span { float: left; clear: none; margin-top: 114px; }
+div#headcontainer div#header h1 { color: #000000; font-size: 28px; }
+
+/* leftcolumn */
+div#headcontainer div#leftcolumn div#leftcolumn_menu {width:191px; margin: 0px; padding: 0px 0px 0px 0px; background-color: #fff; text-align: left;}
+div#headcontainer div#leftcolumn div#leftcolumn_menu h1 {cursor:pointer;}
+div#headcontainer div#leftcolumn {width:191px; float:left; margin: 0px 12px 0px 0px; padding: 8px 0px 0px 0px; background-color: #fff; text-align: left;}
+div#headcontainer div#leftcolumn ul {width:191px; margin: 0px 0px 2px 0px;background-color: #fff;}
+div#headcontainer div#leftcolumn ul li {width:191px; list-style-type: none; height: 20px;}
+div#headcontainer div#leftcolumn ul li a {width:183px; padding: 0px 0px 0px 8px; color:#58585a; text-decoration: none;  line-height: 20px; display: block;}
+div#headcontainer div#leftcolumn ul li a:hover {width:183px; padding:0px 0px 0px 8px; color:#ee7f00; text-decoration: none; line-height: 20px; display: block;}
+div#headcontainer div#leftcolumn ul li .active {color: black; color: #ee7f00;}
+div#headcontainer div#leftcolumn div#search {background:url(/assets/bg_pattern.gif); padding: 95px 0px 0px 0px;}
+div#headcontainer div#leftcolumn div#search input.searchfield {float:left; height:20px; width:100px; line-height: 16px; color:#999999; background:url(/assets/belmijterug_bg.gif) repeat-x top left; border:1px solid #cccccc; font-family: Verdana, Arial, Helvetica, sans-serif; font-size:10px; margin: 0px 0px 20px 8px; padding:0px 0px 0px 3px;}
+div#headcontainer div#leftcolumn div#search input.belmij {float:left; width:61px; height:18px; margin: 0px 0px 20px 0px;}
+
+div#headcontainer div#account_details ul {width:171px; margin: 0px 0px 16px 0px;background-color: #fff;}
+div#headcontainer div#account_details ul li {width:171px; border-bottom: 1px solid #e5e5e5; list-style-type: none;  height: 22px;}
+div#headcontainer div#account_details ul li a {width:167px; padding: 0px 0px 0px 8px; color:#58585a; text-decoration: none;  line-height: 21px; display: block;}
+div#headcontainer div#account_details ul li a:hover {width:167px; padding:0px 0px 0px 8px; color:#ff6600; text-decoration: none; line-height: 21px; display: block;}
+div#headcontainer div#account_details ul li.active {background: url(/assets/li_hover.gif) no-repeat right;}
+
+div#headcontainer div#account_ingelogd div#account_ingelogd_info {padding: 5px 8px;background:url(/assets/bg_pattern_dark.gif); height: 238px;}
+
+/* content */
+div#headcontainer div#content {width:567px; margin: 0; padding: 0; float:left; text-align: left;}
+div#headcontainer div#content table {border-collapse: collapse;}
+
+div#headcontainer div#content div#promo {width:539px; overflow: hidden; }
+div#headcontainer div#content div#promo img { margin-bottom: 12px; }
+div#headcontainer div#content div#promo table { width: 539px; height: 57px; border: 1px solid #999999; }
+div#headcontainer div#content div#promo table td { padding: 10px; width: 50%; border: 1px solid #999999; }
+div#headcontainer div#content div#promo table td img { margin-right: 10px; }
+div#headcontainer div#content .left {float: left; clear: none;}
+div#headcontainer div#content .right { float: right; clear: none;}
+div#headcontainer div#content .item_left {height:117px; width:264px; margin: 0px 13px 0px 0px; padding: 6px 4px 6px 4px; float:left; background:url(/assets/borderbox.gif) top left no-repeat;}
+div#headcontainer div#content .item_left p {color:#999999; line-height: 14px; width:141px; float: left;}
+div#headcontainer div#content .item_right {height:117px; width:264px; margin: 0px 0px 0px 0px; padding: 6px 4px 6px 4px; float:left; background:url(/assets/borderbox.gif) top left no-repeat;}
+div#headcontainer div#content .item_right p {color:#999999; line-height: 14px; width:141px; float: left;}
+div#headcontainer div#content .item-img {height:108px; float:left; width:264px; margin: 0px 13px 0px 0px; padding: 6px 4px 6px 4px; float:left; background:url(/assets/borderbox.gif) top left no-repeat;}
+
+div#headcontainer div#content .item-text {height:108px; width:264px; margin: 0px 0px 0px 0px; padding: 6px 4px 6px 4px; float:left; background:url(/assets/borderbox.gif) top left no-repeat;}
+div#headcontainer div#content .item-text p {color:#999999; line-height: 14px; height: 84px;}
+
+/* footer */
+div#headcontainer div#content div#footer {width:555px; height:40px; padding:0; background:url(/assets/borderbox.gif) top left repeat-x; clear:both;}
+div#headcontainer div#content div#footer_voorkant {width:555px; height:40px; padding:0; background:url(/assets/borderbox_cut.gif) top left repeat-x; clear:both;}
+
+div#headcontainer div#content div#footer ul#sitemap {width:557px; font-size: 10px; float:left; margin: 20px 0px 0px 0px;}
+div#headcontainer div#content div#footer ul#sitemap li {list-style-type: none; line-height: auto; float:left; color:#666666; border-right: 1px solid #666666; padding: 0px 5px 0px 5px; margin:0;}
+div#headcontainer div#content div#footer ul#sitemap li.last {padding:0px 0px 0px 7px; border-right: 0px;}
+div#headcontainer div#content div#footer ul#sitemap li a {color:#666666; text-decoration: none;}
+div#headcontainer div#content div#footer ul#sitemap li a:hover {color:#666666; text-decoration: underline;}
+div#headcontainer div#content div#footer_voorkant ul#sitemap {width:557px; font-size: 10px; float:left; margin: 20px 0px 0px 0px;}
+div#headcontainer div#content div#footer_voorkant ul#sitemap li {list-style-type: none; line-height: auto; float:left; color:#666666; border-right: 1px solid #666666; padding: 0px 5px 0px 5px; margin:0;}
+div#headcontainer div#content div#footer_voorkant ul#sitemap li.last {padding:0px 0px 0px 7px; border-right: 0px;}
+div#headcontainer div#content div#footer_voorkant ul#sitemap li a {color:#666666; text-decoration: none;}
+div#headcontainer div#content div#footer_voorkant ul#sitemap li a:hover {color:#666666; text-decoration: underline;}
+
+/* rightcolumn */
+div#headcontainer div#rightcolumn {width:192px; float:left; text-align: left;}
+div#headcontainer div#rightcolumn div#account {width:182px; padding:5px 0px 10px 8px; margin:0px 0px 12px 0px; border: 1px solid #a7a7a7;}
+div#headcontainer div#rightcolumn div#banner {background: url(/assets/dwd_usp.jpg) center center; width:174px; padding:5px 8px 10px 8px; margin:0px 0px 12px 0px; height: 340px; border: 1px solid #a7a7a7; cursor: pointer;}
+div#headcontainer div#rightcolumn div#account_ingelogd {width:182px; padding:5px 0px 10px 8px; margin:0px 0px 12px 0px; border: 1px solid #a7a7a7;}
+div#headcontainer div#rightcolumn div#account_details {width:182px; padding:5px 0px 10px 8px; margin:0px 0px 12px 0px; border: 1px solid #a7a7a7;}
+div#headcontainer div#rightcolumn div#offerte {width:182px; padding:5px 0px 10px 8px; margin:0px 0px 12px 0px; border: 1px solid #a7a7a7;}
+div#headcontainer div#rightcolumn div#offerte_ingelogd {width:182px; padding:5px 0px 10px 8px; margin:0px 0px 12px 0px; border: 1px solid #a7a7a7;}
+div#headcontainer div#rightcolumn div#partners {width:188px; margin-top:7px;}
+div#headcontainer div#rightcolumn div#partners img {margin: 0px 5px 0px 0px;}
+div#headcontainer div#rightcolumn .inloggen {font-family: Arial, Helvetica, sans-serif; background-color:#ee7f00; color:#fff; font-size: 10px; height:22px; border:1px solid #dadada; padding: 0px 3px 0px 3px; text-transform: uppercase; font-weight: bold; margin:0px 5px 5px 0px; width:65px; background: url(/assets/button_account.gif) no-repeat center right; text-align: left;}
+div#headcontainer div#rightcolumn .uitloggen {font-family: Arial, Helvetica, sans-serif; background-color:#ee7f00; color:#fff; font-size: 10px; height:22px; border:1px solid #dadada; padding: 0px 3px 0px 3px; text-transform: uppercase; font-weight: bold; margin:0px 5px 5px 0px; width:90px; background: url(/assets/button_account.gif) no-repeat center right; text-align: left;}
+div#headcontainer div#rightcolumn .nieuweklant {font-family: Arial, Helvetica, sans-serif; background-color:#ee7f00; color:#fff; font-size: 10px; height:22px; border:1px solid #dadada; padding: 0px 3px 0px 3px; text-transform: uppercase; font-weight: bold; margin:0px 5px 5px 0px; width:101px; background: url(/assets/button_account.gif) no-repeat center right; text-align: left;}
+div#headcontainer div#rightcolumn .winkelwagen {font-family: Arial, Helvetica, sans-serif; background-color:#ee7f00; color:#fff; font-size: 10px; height:22px; border:1px solid #dadada; padding: 0px 3px 0px 3px; text-transform: uppercase; font-weight: bold; margin:0px 5px 5px 0px; width:175px; background: url(/assets/button_account.gif) no-repeat center right; text-align: left;}
+div#headcontainer div#rightcolumn div#servicelijn {width:174px; padding:5px 8px 10px 8px; margin:0px 0px 12px 0px; border: 1px solid #a7a7a7; overflow: hidden;}
+div#headcontainer div#rightcolumn div#servicelijn_ingelogd {width:174px; padding:5px 8px 10px 8px; margin:0px 0px 12px 0px; border: 1px solid #a7a7a7; overflow: hidden;}
+div#headcontainer div#rightcolumn div#nieuwsbrief {width:182px; padding:5px 0px 10px 8px; margin:0px 0px 12px 0px; border: 1px solid #a7a7a7;}
+
+
+/****************** textopmaak index-pagina ***********************/
+.bloktxt{margin-left:3px;}
+
+input.textfield {height:17px; width:170px; line-height: 17px; color:#000; border:1px solid #cccccc; font-family: Verdana, Arial, Helvetica, sans-serif; font-size:10px; margin: 0px 0px 9px 0px; padding:0px 0px 0px 3px;}
+input.telfield {float:left; height:20px; width:98px; line-height: 18px; color:#999999; background:url(/assets/belmijterug_bg.gif) repeat-x top left; border:1px solid #cccccc; font-family: Verdana, Arial, Helvetica, sans-serif; font-size:10px; margin: 20px 0px 9px 0px; padding:0px 0px 0px 3px;}
+input.belmij {float:left; width:71px; height:22px; margin: 20px 0px 0px 0px;}
